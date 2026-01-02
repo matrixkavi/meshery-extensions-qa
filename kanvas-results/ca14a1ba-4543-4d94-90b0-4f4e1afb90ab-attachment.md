@@ -1,0 +1,82 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic:
+            - img
+            - img
+        - list [ref=e9]:
+          - separator [ref=e10]
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - generic:
+              - img
+          - group [ref=e13]:
+            - listitem [ref=e14]:
+              - link "Document Text" [ref=e15] [cursor=pointer]:
+                - /url: https://docs.meshery.io
+                - img "Document Text" [ref=e17]
+            - listitem [ref=e20]:
+              - link [ref=e21] [cursor=pointer]:
+                - /url: https://slack.meshery.io
+                - img [ref=e23]
+            - listitem [ref=e26]:
+              - link [ref=e27] [cursor=pointer]:
+                - /url: https://meshery.io/community#community-forums
+                - img [ref=e29]
+            - listitem [ref=e31]:
+              - link [ref=e32] [cursor=pointer]:
+                - /url: https://github.com/meshery/meshery/issues/new/choose
+                - img [ref=e34]
+          - listitem [ref=e39]:
+            - generic [ref=e40]:
+              - text: stable-v0.8.194-3
+              - link [ref=e42] [cursor=pointer]:
+                - /url: https://docs.meshery.io/project/releases/v0.8.194-3
+                - img [ref=e43]
+              - generic [ref=e45]:
+                - text: Update available
+                - link [ref=e46] [cursor=pointer]:
+                  - /url: https://docs.meshery.io/project/releases/v0.8.194
+                  - img [ref=e47]
+    - generic [ref=e49]:
+      - banner [ref=e50]:
+        - generic [ref=e52]:
+          - generic [ref=e54]:
+            - button [ref=e56] [cursor=pointer]:
+              - img [ref=e57]
+            - text: /
+            - button [ref=e66] [cursor=pointer]:
+              - img [ref=e67]
+            - progressbar [ref=e71]:
+              - img [ref=e72]
+            - text: /
+            - heading [level=5]
+          - generic [ref=e75]:
+            - button "contexts" [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]:
+                - img [ref=e80]
+                - generic [ref=e81]: "0"
+            - button [ref=e84] [cursor=pointer]:
+              - img [ref=e85]
+            - button [ref=e92] [cursor=pointer]:
+              - img [ref=e94]
+            - button [ref=e97] [cursor=pointer]:
+              - img [ref=e98]
+      - generic [ref=e100]:
+        - main [ref=e101]
+        - contentinfo [ref=e102]:
+          - paragraph [ref=e103]:
+            - generic [ref=e104] [cursor=pointer]:
+              - text: Built with
+              - img [ref=e105]
+              - text: by the Meshery Community
+  - alert [ref=e107]
+  - generic [ref=e109]:
+    - img "meshery-logo-light-text" [ref=e111]
+    - heading "This loading screen is more reliable than your YAML. Sad, but true." [level=1] [ref=e143]
+```

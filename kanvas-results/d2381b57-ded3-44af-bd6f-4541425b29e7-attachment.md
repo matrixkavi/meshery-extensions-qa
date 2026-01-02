@@ -1,0 +1,87 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - heading "Logo" [level=1] [ref=e4]:
+      - img "Logo" [ref=e5]
+    - generic [ref=e6]: CONTINUE WITH
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - button "github Icon SIGN IN WITH GITHUB" [ref=e10] [cursor=pointer]:
+          - img "github Icon" [ref=e11]
+          - generic [ref=e12]: SIGN IN WITH GITHUB
+        - button "google Icon SIGN IN WITH GOOGLE" [ref=e14] [cursor=pointer]:
+          - img "google Icon" [ref=e15]
+          - generic [ref=e16]: SIGN IN WITH GOOGLE
+        - generic [ref=e17]: OR
+        - generic [ref=e18]:
+          - link "LOGIN" [ref=e19] [cursor=pointer]:
+            - /url: /login
+          - link "SIGN UP" [ref=e20] [cursor=pointer]:
+            - /url: /registration
+        - generic [ref=e21]:
+          - textbox "E-Mail" [ref=e22]
+          - generic [ref=e23]: E-Mail
+        - generic [ref=e24]:
+          - textbox "Password" [ref=e25]
+          - generic [ref=e26]: Password
+          - generic [ref=e27]: visibility_outline
+        - button "Sign in with password" [ref=e28] [cursor=pointer]
+      - paragraph [ref=e29]:
+        - text: By signing in, you agree to the
+        - link "terms of use" [ref=e30] [cursor=pointer]:
+          - /url: /legal/terms-of-service.html
+        - text: ","
+        - link "privacy policy" [ref=e31] [cursor=pointer]:
+          - /url: /legal/privacy-policy.html
+        - text: ", and use of cookies."
+      - generic [ref=e32]:
+        - link "Forgot Password?" [ref=e33] [cursor=pointer]:
+          - /url: /recovery
+        - paragraph [ref=e34]:
+          - link "FAQs" [ref=e35] [cursor=pointer]:
+            - /url: "#faqs-modal"
+        - link "Resend Verification Email" [ref=e36] [cursor=pointer]:
+          - /url: /verification
+  - generic [ref=e38]:
+    - button "Previous" [ref=e39] [cursor=pointer]: ←Previous
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - img [ref=e43]
+        - heading [level=3] [ref=e44]: Regain Control
+        - paragraph [ref=e45]: Kanvas is a hands-on tool. Slide into the driver's seat.
+      - tabpanel [ref=e46]:
+        - generic [ref=e47]:
+          - img [ref=e48]
+          - img [ref=e49]
+        - heading [level=3] [ref=e50]: Composable Infrastructure
+        - paragraph [ref=e51]: Choose from thousand of versioned cloud native components.
+      - tabpanel [ref=e52]:
+        - img "Collaborative Design with Kanvas" [ref=e53]
+        - heading "Collaborative Design" [level=3] [ref=e54]
+        - paragraph [ref=e55]: GitOps with teammates is more fun (and productive). Merge, clone, deploy and publish your designs.
+      - tabpanel [ref=e56]:
+        - img [ref=e57]
+        - heading [level=3] [ref=e58]: Regain Control
+        - paragraph [ref=e59]: Kanvas is a hands-on tool. Slide into the driver's seat.
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - img [ref=e62]
+          - img [ref=e63]
+        - heading [level=3] [ref=e64]: Composable Infrastructure
+        - paragraph [ref=e65]: Choose from thousand of versioned cloud native components.
+      - generic [ref=e66]:
+        - img [ref=e67]
+        - heading [level=3] [ref=e68]: Collaborative Design
+        - paragraph [ref=e69]: GitOps with teammates is more fun (and productive). Merge, clone, deploy and publish your designs.
+      - generic [ref=e70]:
+        - img [ref=e71]
+        - heading [level=3] [ref=e72]: Regain Control
+        - paragraph [ref=e73]: Kanvas is a hands-on tool. Slide into the driver's seat.
+    - button "Next" [ref=e74] [cursor=pointer]: →Next
+    - tablist [ref=e75]:
+      - tab "1 of 3" [ref=e76] [cursor=pointer]: • 1
+      - tab "2 of 3" [selected] [ref=e77] [cursor=pointer]: • 2
+      - tab "3 of 3" [ref=e78] [cursor=pointer]: • 3
+```

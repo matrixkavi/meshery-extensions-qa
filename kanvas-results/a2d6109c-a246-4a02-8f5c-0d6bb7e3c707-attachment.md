@@ -1,0 +1,85 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - img [ref=e11]
+        - list [ref=e12]:
+          - button "Dashboard" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]:
+              - img [ref=e17]
+              - generic:
+                - generic: Dashboard
+          - button "Lifecycle" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]:
+              - img [ref=e25]
+              - generic:
+                - generic: Lifecycle
+          - button "Configuration" [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]:
+              - img [ref=e31]
+              - generic:
+                - generic: Configuration
+          - button "meshery-button-2 Performance" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]:
+              - img "meshery-button-2" [ref=e39]
+              - generic:
+                - generic: Performance
+          - button "Extensions" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - generic:
+                - generic: Extensions
+          - separator [ref=e94]
+          - list [ref=e95]:
+            - button "Kanvas" [ref=e96] [cursor=pointer]:
+              - generic [ref=e98]:
+                - generic [ref=e99]:
+                  - img
+                - generic:
+                  - generic: Kanvas
+          - separator [ref=e100]
+        - generic [ref=e101]:
+          - img [ref=e104] [cursor=pointer]
+          - group [ref=e106]:
+            - listitem [ref=e107]:
+              - button [ref=e108] [cursor=pointer]:
+                - img [ref=e109]
+          - listitem [ref=e111]:
+            - generic [ref=e112]: v0.8.194-3
+    - generic [ref=e113]:
+      - banner [ref=e114]:
+        - generic [ref=e116]:
+          - generic [ref=e118]:
+            - button [ref=e120] [cursor=pointer]:
+              - img [ref=e121]
+            - text: /
+            - button [ref=e130] [cursor=pointer]:
+              - img [ref=e131]
+            - progressbar [ref=e135]:
+              - img [ref=e136]
+            - text: /
+            - heading "KanvasBETA" [level=5] [ref=e138]:
+              - text: Kanvas
+              - superscript [ref=e139]: BETA
+          - generic [ref=e141]:
+            - button "contexts" [ref=e144] [cursor=pointer]:
+              - generic [ref=e145]:
+                - img [ref=e146]
+                - generic [ref=e147]: "0"
+            - button [ref=e150] [cursor=pointer]:
+              - img [ref=e151]
+            - button [ref=e158] [cursor=pointer]:
+              - img [ref=e160]
+            - button [ref=e163] [cursor=pointer]:
+              - img [ref=e164]
+      - main [ref=e167]
+  - alert [ref=e168]
+  - generic [ref=e170]:
+    - img "meshery-logo-light-text" [ref=e172]
+    - heading "May your code be bug-free and your YAML be... well, less buggy. We can't expect miracles." [level=1] [ref=e204]
+```

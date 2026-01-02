@@ -1,0 +1,59 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Meshery logo" [ref=e6]
+          - img "Meshery logo text" [ref=e7]
+        - heading "Oops! It seems like you don't have the necessary permissions to view this page." [level=4] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - heading "YOUR CURRENT SESSION" [level=5] [ref=e12]
+            - generic [ref=e13]:
+              - generic [ref=e14]:
+                - heading "Organization" [level=6] [ref=e15]
+                - generic [ref=e16]:
+                  - img [ref=e17]
+                  - generic [ref=e42]: Layer5
+              - generic [ref=e43]:
+                - heading "Organization Role(s)" [level=6] [ref=e44]
+                - generic [ref=e45]: No roles found
+              - generic [ref=e46]:
+                - heading "Provider Role(s)" [level=6] [ref=e47]
+                - generic [ref=e48]: No roles found
+          - separator [ref=e49]
+          - generic [ref=e50]:
+            - heading "YOUR OPTIONS" [level=5] [ref=e51]
+            - group [ref=e53]:
+              - heading "Switch Organization" [level=6] [ref=e54]
+              - generic [ref=e57]:
+                - combobox [ref=e58] [cursor=pointer]
+                - textbox: c5ada327-8a58-4c8a-b9fa-51b95696488c
+                - img
+                - group
+        - img [ref=e60]
+      - link "Return to Dashboard" [ref=e62] [cursor=pointer]:
+        - /url: /
+      - paragraph [ref=e63]:
+        - text: For more help, please inquire on the
+        - link "discussion forum" [ref=e64] [cursor=pointer]:
+          - /url: https://meshery.io/community#community-forums
+        - text: or the
+        - link "Slack workspace" [ref=e65] [cursor=pointer]:
+          - /url: https://slack.meshery.io
+        - text: .
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - heading "Please pardon our mesh." [level=1] [ref=e68]
+        - heading "An error occurred while fetching your organization permissions" [level=5] [ref=e69]
+      - paragraph [ref=e70]:
+        - text: Start a conversation at the Meshery community
+        - link "discussion forum" [ref=e71] [cursor=pointer]:
+          - /url: https://meshery.io/community#community-forums/c/meshery/5
+        - text: .
+  - alert [ref=e72]
+```

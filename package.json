@@ -1,0 +1,19 @@
+{
+  "name": "qa",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "",
+  "author": "",
+  "main": "",
+  "scripts": {
+    "report:generate": "allure generate",
+    "report:open": "allure open",
+    "clean": "rm -rf ./allure-results"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "allure": "3.0.0",
+    "allure-js-commons": "^3.3.3"
+  }
+}

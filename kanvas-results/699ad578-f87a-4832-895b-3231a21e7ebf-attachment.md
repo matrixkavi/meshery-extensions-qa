@@ -1,0 +1,56 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - heading "Logo" [level=1] [ref=e4]:
+      - img "Logo"
+    - generic [ref=e5]: CONTINUE WITH
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "github Icon Sign in with github" [ref=e9]:
+          - img "github Icon"
+          - text: Sign in with github
+        - button "google Icon Sign in with google" [ref=e11]:
+          - img "google Icon"
+          - text: Sign in with google
+        - generic [ref=e12]: OR
+        - generic [ref=e13]:
+          - link "LOGIN" [ref=e14] [cursor=pointer]:
+            - /url: /login
+          - link "SIGN UP" [ref=e15] [cursor=pointer]:
+            - /url: /registration
+        - generic [ref=e16]:
+          - textbox "E-Mail" [ref=e17]
+          - text: E-Mail
+        - generic [ref=e18]:
+          - textbox "Password" [ref=e19]
+          - text: Password visibility_outline
+        - button "Sign in with password" [ref=e20]
+      - paragraph [ref=e21]:
+        - text: By signing in, you agree to the
+        - link "terms of use" [ref=e22] [cursor=pointer]:
+          - /url: /legal/terms-of-service.html
+        - text: ","
+        - link "privacy policy" [ref=e23] [cursor=pointer]:
+          - /url: /legal/privacy-policy.html
+        - text: ", and use of cookies."
+      - generic [ref=e24]:
+        - link "close" [ref=e26] [cursor=pointer]:
+          - /url: "#!"
+        - generic [ref=e27]:
+          - heading "Frequently Asked Questions" [level=4] [ref=e28]
+          - list [ref=e29]:
+            - listitem [ref=e30]:
+              - generic [ref=e31]: info Do I have to sign in? expand_more
+              - generic [ref=e32]:
+                - paragraph [ref=e33]: No. You do not have to sign in to use Meshery. Simple deploy Meshery locally and choose the Local Provider, "None", to use Meshery in single-user mode.
+                - paragraph [ref=e34]: Layer5 believes privacy is a fundamental human right, so every Layer5 product is designed to minimize the collection and use of your data, and provide transparency and control over your information.
+            - listitem [ref=e35]:
+              - generic [ref=e36]: info Why should I sign in? expand_more
+              - generic [ref=e37]:
+                - paragraph [ref=e38]: "You might want to sign in for the following benefits:"
+                - list [ref=e39]:
+                  - listitem [ref=e40]: to save your work, including designs, environment configuration, user preferences, and more
+                  - listitem [ref=e41]
+```

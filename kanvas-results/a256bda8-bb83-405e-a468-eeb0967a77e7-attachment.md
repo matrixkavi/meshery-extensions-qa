@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - img [ref=e11]
+        - list [ref=e12]:
+          - button "Dashboard" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]:
+              - img [ref=e17]
+              - generic:
+                - generic: Dashboard
+          - button "Lifecycle" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]:
+              - img [ref=e25]
+              - generic:
+                - generic: Lifecycle
+          - button "Configuration" [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]:
+              - img [ref=e31]
+              - generic:
+                - generic: Configuration
+          - button "meshery-button-2 Performance" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]:
+              - img "meshery-button-2" [ref=e39]
+              - generic:
+                - generic: Performance
+          - button "Extensions" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - generic:
+                - generic: Extensions
+          - separator [ref=e94]
+          - list [ref=e95]:
+            - button "Kanvas" [ref=e96] [cursor=pointer]:
+              - generic [ref=e98]:
+                - img [ref=e100]
+                - generic:
+                  - generic: Kanvas
+          - separator [ref=e101]
+        - generic [ref=e102]:
+          - img [ref=e105] [cursor=pointer]
+          - group [ref=e107]:
+            - listitem [ref=e108]:
+              - button [ref=e109] [cursor=pointer]:
+                - img [ref=e110]
+          - listitem [ref=e112]:
+            - generic [ref=e113]: v0.8.194-3
+    - generic [ref=e114]:
+      - banner [ref=e115]:
+        - generic [ref=e117]:
+          - generic [ref=e119]:
+            - button [ref=e121] [cursor=pointer]:
+              - img [ref=e122]
+            - text: /
+            - button [ref=e131] [cursor=pointer]:
+              - img [ref=e132]
+            - group [ref=e136]:
+              - generic [ref=e141]:
+                - combobox [ref=e142] [cursor=pointer]:
+                  - generic [ref=e143]: Kanvas - Getting Started
+                - textbox: 70dd0adc-e267-4067-87c5-9f182eb16254
+                - img
+                - group
+            - text: /
+            - heading "KanvasBETA" [level=5] [ref=e144]:
+              - text: Kanvas
+              - superscript [ref=e145]: BETA
+          - generic [ref=e147]:
+            - button "contexts" [ref=e150] [cursor=pointer]:
+              - generic [ref=e151]:
+                - img [ref=e152]
+                - generic [ref=e153]: "2"
+            - button "99+" [ref=e156] [cursor=pointer]:
+              - generic [ref=e157]:
+                - img [ref=e158]
+                - generic [ref=e161]: 99+
+            - button [ref=e165] [cursor=pointer]:
+              - img [ref=e167]
+            - button [ref=e169] [cursor=pointer]:
+              - img [ref=e170]
+      - main [ref=e173]
+  - alert [ref=e174]
+  - generic [ref=e176]:
+    - img "meshery-logo-light-text" [ref=e178]
+    - 'heading "YAML: Where indentation errors go to reproduce like rabbits." [level=1] [ref=e210]'
+```

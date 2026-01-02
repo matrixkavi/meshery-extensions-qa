@@ -1,0 +1,117 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - img [ref=e11]
+        - list [ref=e12]:
+          - button "Dashboard" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]:
+              - img [ref=e17]
+              - generic:
+                - generic: Dashboard
+          - button "Lifecycle" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]:
+              - img [ref=e25]
+              - generic:
+                - generic: Lifecycle
+          - button "Configuration" [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]:
+              - img [ref=e31]
+              - generic:
+                - generic: Configuration
+          - button "meshery-button-2 Performance" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]:
+              - img "meshery-button-2" [ref=e39]
+              - generic:
+                - generic: Performance
+          - button "Extensions" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - generic:
+                - generic: Extensions
+          - separator [ref=e94]
+          - list [ref=e95]:
+            - button "Kanvas" [ref=e96] [cursor=pointer]:
+              - generic [ref=e98]:
+                - generic [ref=e99]:
+                  - img
+                - generic:
+                  - generic: Kanvas
+          - separator [ref=e100]
+        - generic [ref=e101]:
+          - img [ref=e104] [cursor=pointer]
+          - group [ref=e106]:
+            - listitem [ref=e107]:
+              - button [ref=e108] [cursor=pointer]:
+                - img [ref=e109]
+          - listitem [ref=e111]:
+            - generic [ref=e112]: v0.8.194-3
+    - generic [ref=e113]:
+      - banner [ref=e114]:
+        - generic [ref=e116]:
+          - generic [ref=e118]:
+            - button [ref=e120] [cursor=pointer]:
+              - img [ref=e121]
+            - text: /
+            - button [ref=e130] [cursor=pointer]:
+              - img [ref=e131]
+            - group [ref=e135]:
+              - generic [ref=e140]:
+                - combobox [ref=e141] [cursor=pointer]:
+                  - generic [ref=e142]: Kanvas - Getting Started
+                - textbox: 70dd0adc-e267-4067-87c5-9f182eb16254
+                - img
+                - group
+            - text: /
+            - heading "KanvasBETA" [level=5] [ref=e143]:
+              - text: Kanvas
+              - superscript [ref=e144]: BETA
+          - generic [ref=e146]:
+            - button "contexts" [ref=e149] [cursor=pointer]:
+              - generic [ref=e150]:
+                - img [ref=e151]
+                - generic [ref=e152]: "2"
+            - button "99+" [ref=e155] [cursor=pointer]:
+              - generic [ref=e156]:
+                - img [ref=e157]
+                - generic [ref=e160]: 99+
+            - button [ref=e164] [cursor=pointer]:
+              - img [ref=e166]
+            - button [ref=e168] [cursor=pointer]:
+              - img [ref=e169]
+      - main [ref=e172]
+      - generic:
+        - generic [ref=e177]:
+          - img [ref=e178]
+          - paragraph [ref=e180]: Failed to get Meshery Broker endpoint
+          - group [ref=e182]:
+            - button "Open" [ref=e183] [cursor=pointer]:
+              - img [ref=e184]
+            - button "Close" [ref=e188] [cursor=pointer]:
+              - img [ref=e189]
+        - generic [ref=e195]:
+          - img [ref=e196]
+          - paragraph [ref=e198]: Meshery Broker unreachable
+          - group [ref=e200]:
+            - button "Open" [ref=e201] [cursor=pointer]:
+              - img [ref=e202]
+            - button "Close" [ref=e206] [cursor=pointer]:
+              - img [ref=e207]
+        - generic [ref=e213]:
+          - img [ref=e214]
+          - paragraph [ref=e216]: MeshSync data handler broker is nil
+          - group [ref=e218]:
+            - button "Open" [ref=e219] [cursor=pointer]:
+              - img [ref=e220]
+            - button "Close" [ref=e224] [cursor=pointer]:
+              - img [ref=e225]
+  - alert [ref=e227]
+  - generic [ref=e229]:
+    - img "meshery-logo-light-text" [ref=e231]
+    - heading "Don't worry, this won't hurt as much as accidentally deleting a line in your YAML." [level=1] [ref=e263]
+```
