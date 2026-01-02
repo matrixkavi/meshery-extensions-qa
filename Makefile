@@ -15,17 +15,11 @@
 include build/Makefile.core.mk
 include build/Makefile.show-help.mk
 
-#-----------------------------------------------------------------------------
-# Docker-based Builds
-#-----------------------------------------------------------------------------
-.PHONY: generate-report
-
-
 # --------------------------------------------------
 # Helpers
 # --------------------------------------------------
 
-define sync_results
+define results-sync
 	@rm -rf $(2)
 	@mkdir -p $(2)
 	@if [ -n "$($(1))" ] && [ -d "$($(1))" ]; then \
@@ -39,27 +33,33 @@ endef
 # --------------------------------------------------
 # Targets
 # --------------------------------------------------
+.PHONY: report-generate results-kanvas-sync remote-provider-results-sync meshery-results-sync report-open report
 
-sync-kanvas-results: ## Sync Kanvas Test Results
+## Sync Kanvas Test Results
+results-kanvas-sync: 
 	@echo "Syncing Kanvas Test Results..."
-	$(call sync_results,KANVAS_RESULTS_PATH,kanvas-results)
+	$(call results-sync,KANVAS_RESULTS_PATH,kanvas-results)
 
-sync-meshery-results: ## Sync Meshery Test Results
+## Sync Meshery Test Results
+meshery-results-sync: 
 	@echo "Syncing Meshery Test Results..."
-	$(call sync_results,MESHERY_RESULTS_PATH,meshery-results)
+	$(call results-sync,MESHERY_RESULTS_PATH,meshery-results)
 
-sync-remote-provider-results: ## Sync Remote Provider Test Results
+## Sync Remote Provider Test Results
+remote-provider-results-sync: 
 	@echo "Syncing Remote Provider Test Results..."
-	$(call sync_results,REMOTE_PROVIDER_RESULTS_PATH,remote-provider-results)
+	$(call results-sync,REMOTE_PROVIDER_RESULTS_PATH,remote-provider-results)
 
-
-generate-report: ## Generate QA Report
+## Generate fresh QA Report
+report: 
 	@echo "Generating QA Report..."
 	rm -rf allure-results || true
 	mkdir -p allure-results
 	cp kanvas-results/* allure-results/ || true
+	cp meshery-results/* allure-results/ || true
 	npm run report:generate
 
-open-report: generate-report ## Open QA Report
+## Open QA report in browser
+report-open: report-generate 
 	@echo "Opening QA Report..."
 	npm run report:open
