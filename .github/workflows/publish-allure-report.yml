@@ -48,7 +48,7 @@ jobs:
         run: npm ci
 
       - name: Generate Allure Report 🔧
-        run: make report-generate
+        run: make report-build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
