@@ -1,3 +1,7 @@
+
+// Copy the custom js and css to each report's folder.
+// Inject the custom js and css into each report's html file.
+
 const fs = require('fs');
 const path = require('path');
 
