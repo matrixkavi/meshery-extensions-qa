@@ -1,52 +1,54 @@
 (function() {
   'use strict';
 
-  // Enhanced functions: each returns true if the action was performed (elements found and modified), false otherwise.
-  // This allows the observer to disconnect once the task is complete.
+  function replacePoweredBy() {
+    const targetHref = "https://allurereport.org";
+
+    document.querySelectorAll(`a[href="${targetHref}"]`).forEach(anchor => {
+      const parent = anchor.parentElement;
+
+      if (parent && parent.tagName.toLowerCase() === "div") {
+        const newDiv = document.createElement("div");
+
+        // Customize the replacement content
+        newDiv.innerHTML = `
+          <div class="replacement">
+            <!-- New content goes here -->
+            Meshery Authors
+          </div>
+        `;
+
+        parent.replaceWith(newDiv);
+      }
+    });
+    // Optional: Stop observing
+    observer.disconnect(); 
+  }
 
   function insertCSS() {
     const head = document.querySelector('head');
-    if (head && !document.querySelector('link[href="/custom-style.css"]')) { // Check to avoid duplicate inserts
+
+    if (head) {
       const additionalStyle = document.createElement('link');
       additionalStyle.rel = 'stylesheet';
       additionalStyle.href = '/custom-style.css';
       head.appendChild(additionalStyle);
+      
       console.log("Inserted custom CSS.");
-      return true;
+      // Optional: Stop observing
+      observer.disconnect(); 
     }
-    return false;
-  }
-
-  function replacePoweredBy() {
-    const targetHref = "https://allurereport.org";
-    const anchors = document.querySelectorAll(`a[href="${targetHref}"]`);
-    if (anchors.length > 0) {
-      anchors.forEach(anchor => {
-        const parent = anchor.parentElement;
-        if (parent && parent.tagName.toLowerCase() === "div") {
-          const newDiv = document.createElement("div");
-          // Customize the replacement content
-          newDiv.innerHTML = `
-            <div class="replacement">
-              <!-- New content goes here -->
-              Meshery Authors
-            </div>
-          `;
-          parent.replaceWith(newDiv);
-        }
-      });
-      return true;
-    }
-    return false;
   }
 
   function replaceFooter() {
-    // Assuming this function replaces footer elements; adjust selectors and logic as needed.
-    const oldFooter = document.querySelector('footer');
-    if (oldFooter) {
-    const newFooter = document.createElement('footer');
-    newFooter.id = 'meshery-footer'; // ID fixed (removed extra quote)
-    newFooter.innerHTML = `
+      const oldFooter = document.querySelector('footer');
+      
+      // If the old footer exists, and we haven't already replaced it...
+      if (oldFooter && oldFooter.id !== 'meshery-footer') {
+          
+        const newFooter = document.createElement('footer');
+        newFooter.id = 'meshery-footer'; // ID fixed (removed extra quote)
+        newFooter.innerHTML = `
         <!-- meshery-custom-begin -->
         <footer class="footer">
         <div class="text-white">© 2026 The Meshery Authors</div>
@@ -136,110 +138,41 @@
         
         console.log("Replacing old "+oldFooter+" with new "+newFooter);
         oldFooter.replaceWith(newFooter);
-        // footer.innerHTML = `
-        //   <div class="new-footer">
-        //     <!-- New footer content goes here -->
-        //     New Footer
-        //   </div>
-        // `;
-     
-      return true;
-    }
-    return false;
-  }
-  function removeQLogo() {
-    // Assuming this function replaces menu icons; adjust selectors and logic as needed.
-    const icons = document.querySelector('svg[class*="styles_icon__peopu styles_size-s__nGH-V"]');
-    if (icons.length > 0) {
-      icons.forEach(icon => {
-        // Customize the replacement (e.g., change src for images or innerHTML for elements)
-        icon.remove();
-      });
-      return true;
-    }
-    return false;
+      // Optional: Stop observing
+      observer.disconnect(); 
+      }
   }
 
   function replaceMenuIcon() {
-    // Assuming this function replaces menu icons; adjust selectors and logic as needed.
-    const icons = document.querySelector('div[class*="styles_report-logo__"]');
-    // const icons = document.querySelectorAll('.menu-icon'); // Replace with actual selector, e.g., 'img.menu-icon'
-    if (icons.length > 0) {
-      icons.forEach(icon => {
-        // Customize the replacement (e.g., change src for images or innerHTML for elements)
-        if (icon.tagName.toLowerCase() === 'img') {
-          icon.src = '/new-menu-icon.png'; // Example for image replacement
-        } else {
-          icon.innerHTML = 'New Menu Icon'; // Example for non-image
-        }
-      });
-      return true;
-    }
-    return false;
+
+    const oldMenuIcon= document.querySelector('[class*="styles_icon__"]');
+    
+    if (oldMenuIcon && oldMenuIcon.id !== 'meshery-logo') {
+      
+      const newMenuIcon = document.createElement('footer');
+      newMenuIcon.id = 'meshery-logo'; // ID fixed (removed extra quote)
+      newMenuIcon.innerHTML = `<?xmlversion="1.0"encoding="UTF-8"?><svgid="Layer_1"data-name="Layer1"xmlns="http://www.w3.org/2000/svg"viewBox="00207.46207.57"><defs><style>.cls-1{fill:#00d3a9;}.cls-2{fill:#00b39f;}</style></defs><polygonclass="cls-1"points="106.8348.92106.8398.49149.7973.62106.8348.92"/><polygonclass="cls-1"points="106.83108.86106.83158.67150.19133.88106.83108.86"/><polygonclass="cls-2"points="100.6498.15100.6449.3458.2173.66100.6498.15"/><pathclass="cls-2"d="m15.53,158.5c8.32,13.38,19.59,24.72,32.92,33.12v-52.18l-32.92,19.06Z"/><polygonclass="cls-2"points="100.64158.44100.64109.2258.11133.85100.64158.44"/><polygonclass="cls-1"points="54.63188.5297.71163.8954.63138.9854.63188.52"/><polygonclass="cls-2"points="153.13188.78153.13139.32110.12163.92153.13188.78"/><pathclass="cls-2"d="m195.27,152.75c7.16-13.35,11.48-28.44,12.17-44.48l-44.84,25.64,32.67,18.85Z"/><polygonclass="cls-1"points="159.32128.66202.55103.94159.3279.09159.32128.66"/><polygonclass="cls-2"points="153.1368.4153.1319.25110.3243.79153.1368.4"/><polygonclass="cls-2"points="153.13128.44153.1378.83110.22103.68153.13128.44"/><polygonclass="cls-2"points="103.74207.57103.74207.57103.73207.57103.74207.57"/><polygonclass="cls-1"points="54.6378.7454.63128.7197.86103.6854.6378.74"/><pathclass="cls-2"d="m100.64,0c-16.43.48-31.9,4.78-45.56,12.04l45.56,26.19V0Z"/><polygonclass="cls-1"points="54.6318.9154.6368.5897.8943.7854.6318.91"/><pathclass="cls-2"d="m48.44,15.89c-13.33,8.4-24.6,19.75-32.92,33.14l32.92,19V15.89Z"/><pathclass="cls-1"d="m152.85,12.28C139.08,4.88,123.44.49,106.83,0v38.66l46.02-26.38Z"/><pathclass="cls-1"d="m0,107.4c.57,16.52,4.99,32.06,12.41,45.75l33.34-19.3L0,107.4Z"/><pathclass="cls-1"d="m12.41,54.37C5.03,68,.61,83.46,0,99.9l45.79-26.25L12.41,54.37Z"/><pathclass="cls-2"d="m55,195.43c13.68,7.29,29.18,11.6,45.64,12.09v-38.18l-45.64,26.1Z"/><pathclass="cls-1"d="m192.04,49.16c-8.27-13.34-19.47-24.68-32.72-33.09v52.03l32.72-18.94Z"/><pathclass="cls-1"d="m159.32,191.44c13.32-8.46,24.59-19.88,32.87-33.33l-32.87-18.97v52.29Z"/><pathclass="cls-2"d="m207.46,99.63c-.64-16.28-5.02-31.6-12.32-45.12l-32.97,19.09,45.28,26.03Z"/><pathclass="cls-1"d="m106.83,207.52c16.42-.48,31.89-4.78,45.54-12.03l-45.54-26.33v38.36Z"/><polygonclass="cls-2"points="48.44128.2648.4479.265.88103.6648.44128.26"/></svg>`;
+      console.log(`Replacing old ${oldMenuIcon} with new ${newMenuIcon}`);
+      oldMenuIcon.replaceWith(newMenuIcon);
+      }
+      // Optional: Stop observing
+      observer.disconnect(); 
   }
 
-  // Create one observer for each function.
-  // Each observer calls its function on DOM mutations.
-  // Perform an initial call to handle cases where elements are already present.
-  // Disconnect the observer once the function returns true (task completed).
-
-  // Observer for insertCSS
-  const observerCSS = new MutationObserver(() => {
-    if (insertCSS()) {
-      observerCSS.disconnect();
-    }
+  
+  // 2. Create an observer to watch for changes in the DOM
+  const observer = new MutationObserver((mutations) => {
+    // Every time the DOM changes, try to replace the nodes
+    insertCSS();
+    replaceFooter();
+    replaceMenuIcon();
+    replacePoweredBy();
   });
-  observerCSS.observe(document.body, { childList: true, subtree: true });
-  if (insertCSS()) {
-    observerCSS.disconnect();
-  }
 
-  // Observer for removeQLogo
-  const observerQLogo = new MutationObserver(() => {
-    if (removeQLogo()) {
-      observerCSS.disconnect();
-    }
+  // 3. Start observing the document body for added nodes
+  observer.observe(document.body, {
+      childList: true,
+      subtree: true
   });
-  observerQLogo.observe(document.body, { childList: true, subtree: true });
-  if (removeQLogo()) {
-    observerQLogo.disconnect();
-  }
-
-  // Observer for replacePoweredBy
-  const observerPoweredBy = new MutationObserver(() => {
-    if (replacePoweredBy()) {
-      observerPoweredBy.disconnect();
-    }
-  });
-  observerPoweredBy.observe(document.body, { childList: true, subtree: true });
-  if (replacePoweredBy()) {
-    observerPoweredBy.disconnect();
-  }
-
-  // Observer for replaceFooter
-  const observerFooter = new MutationObserver(() => {
-    if (replaceFooter()) {
-      observerFooter.disconnect();
-    }
-  });
-  observerFooter.observe(document.body, { childList: true, subtree: true });
-  if (replaceFooter()) {
-    observerFooter.disconnect();
-  }
-  observerCSS.observe(document.body, { childList: true, subtree: true });
-  if (insertCSS()) {
-    observerCSS.disconnect();
-  }
-
-  // Observer for replaceMenuIcon
-  const observerMenuIcon = new MutationObserver(() => {
-    if (replaceMenuIcon()) {
-      observerMenuIcon.disconnect();
-    }
-  });
-  observerMenuIcon.observe(document.body, { childList: true, subtree: true });
-  if (replaceMenuIcon()) {
-    observerMenuIcon.disconnect();
-  }
 
 })();
