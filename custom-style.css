@@ -2,6 +2,15 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 
+body {
+    background: #3C494F;
+}
+div[data-testid="base-layout"] {
+    background: #3C494F;
+}
+a[href="https://allurereport.org"]{
+    display: none;
+}
 .l5-dark-yellow { background-color: #ebc017 !important; }
 
 .l5-dark-yellow-text { color: #ebc017 !important; }
