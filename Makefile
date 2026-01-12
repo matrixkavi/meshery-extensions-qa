@@ -24,7 +24,7 @@ define results-sync
 	@mkdir -p $(2)
 	@if [ -n "$($(1))" ] && [ -d "$($(1))" ]; then \
 		echo "Copying results from $($(1)) → $(2)"; \
-		cp -r "$($(1))"/* $(2)/ || true; \
+		cp -r "$($(1))"/* $(2)/ ; \
 	else \
 		echo "$(1) not set or directory does not exist, skipping"; \
 	fi
